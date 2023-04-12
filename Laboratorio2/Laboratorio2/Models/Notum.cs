@@ -7,6 +7,8 @@ public partial class Notum
 {
     public int IdNotas { get; set; }
 
+    public string? NombreMateria { get; set; }
+
     public string? NombreEstudiante { get; set; }
 
     public decimal? Lab1 { get; set; }

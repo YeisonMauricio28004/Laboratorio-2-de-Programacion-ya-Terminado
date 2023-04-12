@@ -25,12 +25,15 @@ public partial class NotaEstudianteContext : DbContext
     {
         modelBuilder.Entity<Notum>(entity =>
         {
-            entity.HasKey(e => e.IdNotas).HasName("PK__Nota__858E853D3B284A81");
+            entity.HasKey(e => e.IdNotas).HasName("PK__Nota__858E853D814E59B3");
 
             entity.Property(e => e.Lab1).HasColumnType("decimal(16, 2)");
             entity.Property(e => e.Lab2).HasColumnType("decimal(16, 2)");
             entity.Property(e => e.Lab3).HasColumnType("decimal(16, 2)");
             entity.Property(e => e.NombreEstudiante)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.NombreMateria)
                 .HasMaxLength(50)
                 .IsUnicode(false);
             entity.Property(e => e.Parcial1).HasColumnType("decimal(16, 2)");

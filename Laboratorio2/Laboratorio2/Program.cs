@@ -29,6 +29,9 @@ do
     switch (op)
     {
         case 1:
+            Console.Write("Ingrese el nombre de la materia: ");
+            notas.NombreMateria = Console.ReadLine();
+
             Console.Write("Ingrese el nombre del estudiante: ");
             notas.NombreEstudiante = Console.ReadLine();
             Console.Write("Ingrese lab 1: ");
@@ -58,6 +61,7 @@ do
             {
                 Console.WriteLine("\n---------------------------------------");
                 Console.WriteLine($"Registro #{lista.IdNotas}");
+                Console.WriteLine($"Nombre Materia: {lista.NombreMateria}");
                 Console.WriteLine($"Nombre estudiante: {lista.NombreEstudiante}");
                 Console.WriteLine($"Nota Laboratorio 1: {lista.Lab1}");
                 Console.WriteLine($"Nota Parcial 1: {lista.Parcial1}");
